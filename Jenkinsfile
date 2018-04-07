@@ -7,6 +7,7 @@ pipeline {
     environment {
         REPO = 'nightmareze1/docker-wordpress'
         PRIVATE_REPO = "${PRIVATE_REGISTRY}/${REPO}"
+        DOCKER_PRIVATE = credentials('docker-private-registry')
     }
     stages {
         stage ('Checkout') {
